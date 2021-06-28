@@ -12,8 +12,20 @@
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <ul>
-            <li><a href="/blog/post/">Blog Post</a></li>
+            <li><a href="/blog/berita">Berita</a></li>
+            <li><a href="/blog/how_to">How To</a></li>
+            <li><a href="/blog/gosip">Gosip</a></li>
         </ul>
     </ul>
+
+    <br><br>
+    {% for post in posts %}
+    <ul>
+        <li>{{ post.title }}</li>
+        <li>{{ post.body }}</li>
+        <li>{{ post.category }}</li>
+        <li>{{ post.post_on }}</li>
+    </ul>
+    {% endfor %}
 </body>
 </html>
